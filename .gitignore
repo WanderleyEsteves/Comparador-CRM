@@ -1,0 +1,24 @@
+# Arquivos compilados e cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pastas de dados de entrada e saída (ignora planilhas e zips)
+dados/cfm_zip/*.zip
+dados/empresaX/*.xlsx
+dados/empresa/*.xlsx
+dados/resultado/*.xlsx
+
+# Manter a estrutura de pastas vazias no Git se desejar
+!dados/cfm_zip/.gitkeep
+!dados/empresa/.gitkeep
+!dados/resultado/.gitkeep
+
+# Arquivos de sistema operacional
+Thumbs.db
+.DS_Store
+
+# IDEs e editores
+.vscode/
+.idea/
