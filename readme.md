@@ -66,6 +66,7 @@ CRM_VALIDADOR/
 ├── requirements.txt        # Dependências do projeto
 └── README.md
 ```
+
 ---
 
 ## ⚙️ Como Executar
