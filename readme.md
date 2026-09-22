@@ -46,25 +46,31 @@ O pipeline opera em um fluxo linear de 5 etapas:
 
 5. **Exportação do Relatório:**
    Dados auditados -> Consolidação em DataFrame -> `dados/resultado/medicos_verificados.xlsx`.
+
 ---
 
 ## 📁 Estrutura de Diretórios
 
-   ```text
+```text
 CRM_VALIDADOR/
+├── app_script/
+│   └── organizador_drive.js
 ├── dados/
-│   ├── cfm_zip/            # Diretório de entrada do TOTAL.zip do CFM
-│   ├── empresa/            # Diretório com a planilha interna (.xlsx)
-│   └── resultado/          # Planilha consolidada de saída
+│   ├── cfm_zip/
+│   │   └── TOTAL.zip
+│   ├── empresa/
+│   │   └── medicos.xlsx
+│   └── resultado/
+│       └── medicos_verificados.xlsx
 ├── src/
 │   ├── __init__.py
-│   ├── ibgeAPI.py          # Módulo de integração com a API do IBGE
-│   ├── normalizador.py     # Sanitização e padronização de chaves (CRM/UF)
-│   └── status_compliance.py # Regras de negócio e matriz de risco
-├── comparadorCRM.py        # Orquestrador do pipeline de dados
-├── gerador.py              # Script para geração de dados sintéticos de teste
-├── requirements.txt        # Dependências do projeto
-└── README.md
+│   ├── ibgeAPI.py
+│   ├── normalizador.py
+│   └── statusCompliance.py
+├── comparadorCRM.py
+├── gerador.py
+├── readme.md
+└── .gitignore
 ```
 
 ---
