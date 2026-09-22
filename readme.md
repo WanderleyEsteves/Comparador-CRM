@@ -95,6 +95,27 @@ Todos os dados, nomes e identificadores utilizados nos scripts de teste e demons
 
 ---
 
+---
+
+## 📂 Automação Complementar (Google Apps Script)
+
+Além do pipeline em Python, o projeto conta com um **Google Apps Script** acionado por *Trigger* (`onFormSubmit`) na planilha do Google Sheets.
+
+### ⚙️ Funcionalidades do Script:
+- **Criação Automática de Pastas:** Quando um novo formulário é respondido, o script lê o nome da pessoa e cria uma pasta individual no Google Drive.
+- **Organização de Documentos:** Deteta as colunas de *upload* (CPF, Comprovativo de Residência, CRM, Diploma) e move automaticamente os ficheiros recebidos para a pasta correspondente.
+
+> 📝 **Código-fonte:** O script completo está disponível no diretório [`apps-script/organizador_drive.js`](./apps-script/organizador_drive.js).
+
+### 🛠️ Como Instalar no Google Sheets:
+1. Abra a planilha vinculada ao Google Forms.
+2. Acesse **Extensões > Apps Script**.
+3. Cole o código de [`organizador_drive.js`](./apps-script/organizador_drive.js) e defina o `idPastaContrato`.
+4. Vá a **Acionadores (Triggers)** no menu lateral esquerdo e configure:
+   - **Função:** `organizarArquivosPorPessoa`
+   - **Fonte do evento:** *Da planilha*
+   - **Tipo de evento:** *Ao enviar formulário*
+
 ## ⚖️ Aviso Legal (Disclaimer)
 
 * **Sem Vínculo Institucional:** Este projeto é uma ferramenta independente de processamento de dados e **não possui qualquer vínculo, afiliação, endosso ou ligação oficial** com o Conselho Federal de Medicina (CFM), Conselhos Regionais (CRMs) ou com o Instituto Brasileiro de Geografia e Estatística (IBGE).
