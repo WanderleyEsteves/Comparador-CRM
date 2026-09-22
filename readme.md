@@ -105,12 +105,12 @@ Além do pipeline em Python, o projeto conta com um **Google Apps Script** acion
 - **Criação Automática de Pastas:** Quando um novo formulário é respondido, o script lê o nome da pessoa e cria uma pasta individual no Google Drive.
 - **Organização de Documentos:** Deteta as colunas de *upload* (CPF, Comprovativo de Residência, CRM, Diploma) e move automaticamente os ficheiros recebidos para a pasta correspondente.
 
-> 📝 **Código-fonte:** O script completo está disponível no diretório [`apps-script/organizador_drive.js`](./apps-script/organizador_drive.js).
+> 📝 **Código-fonte:** O script completo está disponível no diretório [`apps-script/organizador_drive.js`](./apps_script/organizador_drive.js).
 
 ### 🛠️ Como Instalar no Google Sheets:
 1. Abra a planilha vinculada ao Google Forms.
 2. Acesse **Extensões > Apps Script**.
-3. Cole o código de [`organizador_drive.js`](./apps-script/organizador_drive.js) e defina o `idPastaContrato`.
+3. Cole o código de [`organizador_drive.js`](./apps_script/organizador_drive.js) e defina o `idPastaContrato`.
 4. Vá a **Acionadores (Triggers)** no menu lateral esquerdo e configure:
    - **Função:** `organizarArquivosPorPessoa`
    - **Fonte do evento:** *Da planilha*
